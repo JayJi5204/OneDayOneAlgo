@@ -1,0 +1,52 @@
+# ========================
+# OS files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Java
+# ========================
+*.class
+.project
+.classpath
+.settings/
+bin/
+target/
+out/
+
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*.pyo
+
+venv/
+.env/
+.venv/
+ENV/
+
+# ========================
+# IDE
+# ========================
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# ========================
+# Algorithm study temp files
+# ========================
+input.txt
+output.txt
+*.tmp
+*.swp
+*.bak
+
+# ========================
+# Executables
+# ========================
+*.exe
+*.jar
