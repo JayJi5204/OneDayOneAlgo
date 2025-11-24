@@ -1,1 +1,2 @@
-파이썬 프로젝트 빌드는 어케하는지 몰라서 너가 해줘야 할 듯
+IDE:VScode
+Extension: Python
