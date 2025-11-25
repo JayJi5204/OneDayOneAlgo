@@ -1,4 +1,4 @@
-package algo_251124;
+package Nov;
 
 
 import java.util.Scanner;
