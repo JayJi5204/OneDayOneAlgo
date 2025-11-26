@@ -76,3 +76,7 @@ def solution2():
     print(answer[0])
     print(answer[1])
     return
+
+if __name__=='__main__':
+    solution1()
+    solution2()
