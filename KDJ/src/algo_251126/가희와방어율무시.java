@@ -1,4 +1,4 @@
-package algo_251125;
+package algo_251126;
 
 import java.util.Scanner;
 
