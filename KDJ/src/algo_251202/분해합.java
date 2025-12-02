@@ -7,12 +7,11 @@ public class 분해합 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		String N = sc.next();
-		int M = Integer.parseInt(N);
+		int N = sc.nextInt();
 		
 		int ans = 0;
 		
-		for(int i = 0; i < M; i++) {
+		for(int i = 0; i < N; i++) {
 			
 			String num = String.valueOf(i);
 			int L = num.length();
@@ -23,7 +22,7 @@ public class 분해합 {
 				sum += num.charAt(j) - '0';
 			}
 			
-			if(sum == M) {
+			if(sum == N) {
 				ans = i;
 				break;
 			}
