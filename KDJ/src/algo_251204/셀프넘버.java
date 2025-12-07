@@ -22,7 +22,7 @@ public class 셀프넘버 {
 			}
 		}
 		for(int i = 1;i <= 10000; i++ ) {
-			if(!not[i] == true) {
+			if(!not[i]) {
 				System.out.println(i);
 			}
 		}
