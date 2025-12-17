@@ -40,14 +40,16 @@ public class ISBN {
 		
 		int ans = 0;
 		
+		
 		for(int i = 0; i < 10; i++) {
+			int check = sum;
 			if(place%2 == 0) {
-				sum += i;
+				check += i;
 			}else if(place%2 == 1){
-				sum += i*3;
+				check += i*3;
 			}
 			
-			if(sum%10 == 0) {
+			if(check%10 == 0) {
 				ans = i;
 				break;
 			}
