@@ -1,7 +1,7 @@
 class InsertionSort:
     def __init__(self):
         pass
-    def sort(self,arr,revserse=False):
+    def sort(self,arr,reverse=False):
         '''
         삽입정렬 알고리즘 구현
         key 값을 기준으로 그 앞쪽에 있는 값들과 비교하여
@@ -11,7 +11,7 @@ class InsertionSort:
         
         for i in range(1,len(arr)):
             key=arr[i]
-            if revserse:
+            if reverse:
                 j=i-1
                 while j>=0 and arr[j]<key:
                     arr[j+1]=arr[j]
