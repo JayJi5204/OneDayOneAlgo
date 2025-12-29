@@ -42,3 +42,15 @@ def test_mergeSort():
     arr_desc = [64, 34, 25, 12, 22, 11, 90]
     sorted_arr_desc = [90, 64, 34, 25, 22, 12, 11]
     assert sorter.sort(arr_desc.copy(), reverse=True) == sorted_arr_desc
+
+def test_heapSort():
+    from 힙정렬 import HeapSort
+    sorter = HeapSort()
+
+    arr = [64, 34, 25, 12, 22, 11, 90]
+    sorted_arr = [11, 12, 22, 25, 34, 64, 90]
+    assert sorter.sort(arr.copy()) == sorted_arr
+
+    arr_desc = [64, 34, 25, 12, 22, 11, 90]
+    sorted_arr_desc = [90, 64, 34, 25, 22, 12, 11]
+    assert sorter.sort(arr_desc.copy(), reverse=True) == sorted_arr_desc
