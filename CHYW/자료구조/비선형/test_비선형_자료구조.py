@@ -17,3 +17,17 @@ def test_minimum_spanning_tree():
     mst_cost_prim, mst_edges_prim = prim(0, graph)
     assert mst_cost_prim == 4
     assert set(mst_edges_prim) == {(0, 1, 1), (1, 2, 1), (2, 3, 2)}
+
+def test_heapq():
+    from 힙 import Heapq
+    heapq = Heapq()
+    heap = []
+    heapq.heappush(heap, 5)
+    heapq.heappush(heap, 3)
+    heapq.heappush(heap, 8)
+    heapq.heappush(heap, 1)
+    assert heap == [1, 3, 8, 5]
+    assert heapq.heappop(heap) == 1
+    assert heap == [3, 5, 8]
+    heapq.heapify(heap)
+    assert heap == [3, 5, 8]
