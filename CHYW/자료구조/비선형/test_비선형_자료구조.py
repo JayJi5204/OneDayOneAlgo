@@ -19,7 +19,7 @@ def test_minimum_spanning_tree():
     assert set(mst_edges_prim) == {(0, 1, 1), (1, 2, 1), (2, 3, 2)}
 
 def test_heapq():
-    from 힙 import Heapq
+    from 비선형.힙 import Heapq
     heapq = Heapq()
     heap = []
     heapq.heappush(heap, 5)
