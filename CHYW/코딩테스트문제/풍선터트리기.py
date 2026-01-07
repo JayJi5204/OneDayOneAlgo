@@ -63,5 +63,4 @@ def solution(a):
     for i in range(len(a)):
         if dp1[i] < a[i] and a[i] > dp2[i]: continue
         else: answer+=1
-        
     return answer
