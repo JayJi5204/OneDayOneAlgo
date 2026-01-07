@@ -19,7 +19,7 @@ def test_minimum_spanning_tree():
     assert set(mst_edges_prim) == {(0, 1, 1), (1, 2, 1), (2, 3, 2)}
 
 def test_heapq():
-    from 비선형.힙 import Heapq
+    from 힙 import Heapq
     heapq = Heapq()
     heap = []
     heapq.heappush(heap, 5)
@@ -31,3 +31,23 @@ def test_heapq():
     assert heap == [3, 5, 8]
     heapq.heapify(heap)
     assert heap == [3, 5, 8]
+
+def test_floyd_warshall():
+    from 플로이드워셜 import FloydWarshall
+    n=4
+    edges = [
+        (1, 2, 4),
+        (1, 3, 1),
+        (1, 4, 6),
+        (3, 1, 5),
+        (3, 4, 4),
+        (4, 3, 2)
+    ]
+    fw = FloydWarshall(n, edges)
+    dist = fw.floyd_warshall()
+    assert dist[1][4] == 5  # 1 -> 3 ->
+    assert dist[4][2] == 11  # 4 -> 3 -> 1 -> 2
+    path = fw.get_path(1, 4)
+    assert path == "1 -> 3 -> 4"
+    path_no = fw.get_path(2, 4)
+    assert path_no == "경로 없음"
