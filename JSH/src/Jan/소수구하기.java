@@ -17,7 +17,7 @@ public class 소수구하기 {
 
 		}
 
-		for (int i = 2; i <= N; i++) {
+		for (int i = 2; i * i <= N; i++) {
 			if (check[i] == false) {
 				continue;
 			}
@@ -30,7 +30,7 @@ public class 소수구하기 {
 		}
 
 		for (int i = M; i <= N; i++) {
-			if(check[i]) {
+			if (check[i]) {
 				System.out.println(i);
 			}
 
