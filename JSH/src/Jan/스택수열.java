@@ -19,7 +19,6 @@ public class 스택수열 {
 		for (int i = 0; i < n; i++) {
 			int input = sc.nextInt();
 			solve(input, stack, outputStack);
-
 		}
 
 		checkOutputStack(outputStack);
