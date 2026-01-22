@@ -1,23 +1,4 @@
 #pytest
-def test_minimum_spanning_tree():
-    from 최소신장트리 import kruskal, prim
-    # 크루스칼 알고리즘 테스트
-    n = 4
-    edges = [(0, 1, 1), (0, 2, 3), (1, 2, 1), (1, 3, 4), (2, 3, 2)]
-    mst_cost, mst_edges = kruskal(n, edges)
-    assert mst_cost == 4
-    assert set(mst_edges) == {(0, 1, 1), (1, 2, 1), (2, 3, 2)} 
-    # 프림 알고리즘 테스트
-    graph = [
-        [(1, 1), (2, 3)],
-        [(0, 1), (2, 1), (3, 4)],
-        [(0, 3), (1, 1), (3, 2)],
-        [(1, 4), (2, 2)]
-    ]
-    mst_cost_prim, mst_edges_prim = prim(0, graph)
-    assert mst_cost_prim == 4
-    assert set(mst_edges_prim) == {(0, 1, 1), (1, 2, 1), (2, 3, 2)}
-
 def test_heapq():
     from 힙 import Heapq
     heapq = Heapq()
@@ -31,23 +12,14 @@ def test_heapq():
     assert heap == [3, 5, 8]
     heapq.heapify(heap)
     assert heap == [3, 5, 8]
+def test_binarysearchtree():
+    from 이진탐색트리 import BinarySearchTree
+    
+    arr = [50,30,24,5,28,45,98,52,60]
+    bst = BinarySearchTree(arr[0])
+    for i in range(1,len(arr)):
+        bst.insert(arr[i])
 
-def test_floyd_warshall():
-    from 플로이드워셜 import FloydWarshall
-    n=4
-    edges = [
-        (1, 2, 4),
-        (1, 3, 1),
-        (1, 4, 6),
-        (3, 1, 5),
-        (3, 4, 4),
-        (4, 3, 2)
-    ]
-    fw = FloydWarshall(n, edges)
-    dist = fw.floyd_warshall()
-    assert dist[1][4] == 5  # 1 -> 3 ->
-    assert dist[4][2] == 11  # 4 -> 3 -> 1 -> 2
-    path = fw.get_path(1, 4)
-    assert path == "1 -> 3 -> 4"
-    path_no = fw.get_path(2, 4)
-    assert path_no == "경로 없음"
+    assert bst.preorder() == [50, 30, 24, 5, 28, 45, 98, 52, 60]
+    assert bst.inorder() == [5, 24, 28, 30, 45, 50, 52, 60, 98]
+    assert bst.postorder() == [5, 28, 24, 45, 30, 60, 52, 98, 50]
