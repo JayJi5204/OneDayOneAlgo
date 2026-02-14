@@ -21,6 +21,16 @@ public class 단지번호붙이기 {
 	static int[] dx = { -1, 1, 0, 0 };
 	static int[] dy = { 0, 0, -1, 1 };
 
+	static class Node {
+		int x;
+		int y;
+
+		public Node(int x, int y) {
+			this.x = x;
+			this.y = y;
+		}
+	}
+
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		sb = new StringBuilder();
@@ -86,14 +96,4 @@ public class 단지번호붙이기 {
 		list.add(count);
 	}
 
-}
-
-class Node {
-	int x;
-	int y;
-
-	public Node(int x, int y) {
-		this.x = x;
-		this.y = y;
-	}
 }
