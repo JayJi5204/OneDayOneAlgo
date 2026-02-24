@@ -1,4 +1,20 @@
 #pytest
+
+def test_벨만포드():
+    from 벨만포드 import BellmanFord
+ 
+    edges = [
+        (1, 2, 4),  # 1번에서 2번으로 가중치 4
+        (1, 3, 3),
+        (2, 3, -1), # 음수 가중치
+        (3, 1, -2)
+    ]
+    bellmanford = BellmanFord()
+    start=1
+    
+    assert bellmanford.search(start,edges) == (False,[float('inf'),0,4,3])
+    
+
 def test_다익스트라():
     from 다익스트라 import Dijkstra
 
