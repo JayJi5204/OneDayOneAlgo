@@ -9,7 +9,7 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 
-public class 토마토 {
+public class 토마토_2차원배열 {
 	static StringBuilder sb;
 
 	static int N, M;
